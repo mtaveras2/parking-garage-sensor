@@ -36,7 +36,7 @@ float checkDistance() {
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  float duration = pulseIn(echoPin, HIGH);
+  long duration = pulseIn(echoPin, HIGH);
   float distance = (duration * .0343) / 2;    
   Serial.println(distance);
   return distance;  // in cm
